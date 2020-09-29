@@ -1,0 +1,149 @@
+<script>
+function display(name1 , name2) 
+ {     document.write (name1 + "to" + name2)
+}   
+display ("welcome", "Geek");
+</script>
+<script>
+   // too many function
+   function add(a,b)
+{
+       document.write("A:" + a + "B:" + b + "C:" + arguments[2])
+   } 
+   add(10,20,30)
+</script>
+<script>
+function disp(name1 , name2)
+{
+   //document.write(name)
+   document.write(arguments[0]);
+   document.write(arguments[1]);
+}
+disp("geeky Shows", "welcome");
+</script>
+
+<script>
+   //default parameters
+   function add(a , b, c=70)
+   { document.write("A=" + a + "<br>" +"B=" + b + "<br>" + "C=" + c + "<br>")
+   }
+   add(10,20,30);
+</script>
+<script>
+   //default parameters (null)
+   function add(a , b, c=null)
+   { document.write("A=" + a + "<br>" +"B=" + b + "<br>" + "C=" + c + "<br>")
+   }
+   add(10,20);
+</script>
+
+<script>
+   //default parameters (arry)
+   function add( num , a = ["Rony", "Ronnie"])
+   { document.write("A =" + a [0] +"<br>" )
+   document.write("A =" + a [1] +"<br>" )
+   document.write("num = " + num  )
+   }
+   add(20 , [10 , 40]);
+</script>
+
+<script>
+   //rest parameters
+   function show(a,...Ronnie)
+   {
+      document.write(a + "<br>"); 
+       document.write(Ronnie[0]);
+   }
+   show(10,20,30,40,50,60);
+</script>
+<script>
+   //rest parameters
+   function restshow(a, ...Ronnie)
+   {
+      console.log("a:" + a);
+      console.log(Ronnie);
+   }
+   restshow(10,20,30,40,50,60);
+   //Argument Object
+   function show (a)
+   {
+      console.log("a:" + a);
+   console.log(arguments);
+   }
+show(10,20,30,40,50,60);
+</script>
+
+<script>
+   //return statement
+   function add(a,b)
+   {
+   return (a+b);
+   }
+    
+    document.write(add(10,20));
+    document.write(add(20,30));
+    document.write(add(30,40));
+    document.write(add(40,50));
+    document.write(add(50,60));
+</script>
+<script>
+   //accessible from any where
+   //global variable
+var i ="ronnie"
+function show() {
+   document.write(i + "<br>"); //inside function
+}
+show();
+document.write(i + "<br>"); // outside function
+
+function disp(){
+document.write(i + "<br>"); // inside function
+}
+disp();
+if (true){
+   document.write(i + "<br>"); // inside block
+}  
+
+</script> 
+<script>
+    // local varriable
+    var i ="Ro" ;
+   function show(){
+      var j ="Ro" ;
+      document.write(j + "<br>");
+      
+      show()
+      document.write(i + "<br>");
+      document.write(j + "<br>");
+      }
+      function disp();
+       </script>
+
+
+      <script>
+         //Block Scope
+         var i ="ron";
+if (true) {  
+let i = 10;
+document.write (i + "<br>");
+}
+document.write (i + "<br>");
+      </script>
+      <script>
+         // Arrow Function
+myfun = (a,b=20) => {
+
+   document.write (a + " " + b );
+}
+myfun(10,20);
+</script>
+<script>
+   var  myfun = a => {document.write (a + "" + "<br>");
+   document.write("ronnie") ; };
+   myfun(10);
+</script>
+<script>
+//arow function
+var myfunction = c => {return c ;}
+
+</script>
